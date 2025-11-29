@@ -1,0 +1,68 @@
+/* Force Gmail-like styling for our custom button */
+.ai-reply-button {
+    background-color: #0b57d0 !important;
+    color: white !important;
+    border-radius: 18px !important;
+    border: none !important;
+    padding: 0 24px !important;
+    height: 36px !important;
+    font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 8px !important;
+    user-select: none !important;
+    line-height: 1 !important;
+    transition: box-shadow .08s linear, min-width .15s cubic-bezier(0.4,0.0,0.2,1) !important;
+}
+
+.ai-reply-button:hover {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15) !important;
+    background-color: #0842a0 !important;
+}
+
+.ai-reply-button[disabled] {
+    background-color: #ccc !important;
+    cursor: default !important;
+    box-shadow: none !important;
+}
+
+/* Container to hold button and dropdown relative to each other */
+.ai-reply-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* The dropdown menu styling */
+.ai-tone-popup {
+    position: absolute;
+    bottom: 100%; /* Show above the button */
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    min-width: 150px;
+    margin-bottom: 8px;
+    padding: 4px 0;
+}
+
+/* Individual tone options */
+.ai-tone-option {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: "Google Sans", Roboto, sans-serif;
+    font-size: 14px;
+    color: #3c4043;
+    transition: background-color 0.2s;
+}
+
+.ai-tone-option:hover {
+    background-color: #f1f3f4; /* Gmail hover grey */
+}
